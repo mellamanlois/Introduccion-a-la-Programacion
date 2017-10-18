@@ -1,0 +1,45 @@
+#include <stdio.h>
+#include <stdlib.h>
+
+int main(int argc, char *argv[])
+{
+    char Nombre[]={};
+    char Nombre2[]={};
+    char AP[]={};
+    char AM[]={};
+    float H,P,Ingreso,IN,Impuesto;
+    int NU;
+    
+    printf("Cuantos nombres tiene el Usuario? 1 o 2  ");
+    scanf("%i",&NU);
+    
+    if (NU==1){
+             printf("Introduzca el nombre completo del empleado ");
+    scanf("%s %s %s",&Nombre,AP,AM);
+    printf("Introduzca las horas laboradas ");
+    scanf("%f",&H);
+    printf("Introduzca el sueldo por hora ");
+    scanf("%f",&P);
+    Ingreso=H*P;
+    Impuesto=0.25*Ingreso;
+    IN=Ingreso-Impuesto;
+   
+    printf("El trabajador %s %s %s recibe un ingreso %.2f\nDe impuesto se le cobra %.2f\nObteniendo asi, un ingreso neto de %.2f",Nombre,AP,AM,Ingreso,Impuesto,IN);
+};
+    if (NU==2){
+    printf("Introduzca el nombre completo del empleado ");
+    scanf("%s %s %s %s",&Nombre,Nombre2,AP,AM);
+    printf("Introduzca las horas laboradas ");
+    scanf("%f",&H);
+    printf("Introduzca el sueldo por hora ");
+    scanf("%f",&P);
+    Ingreso=H*P;
+    Impuesto=0.25*Ingreso;
+    IN=Ingreso-Impuesto;
+   
+    printf("El trabajador %s %s %s %s recibe un ingreso %.2f\nDe impuesto se le cobra %.2f\nObteniendo asi, un ingreso neto de %.2f",Nombre,Nombre2,AP,AM,Ingreso,Impuesto,IN);
+};
+  
+  getch();	
+  return 0;
+}
